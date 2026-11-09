@@ -1,0 +1,61 @@
+NORMALIZZER - FREEWARE LICENSE
+A natural tone photo processor
+Version 1.8.0
+
+Copyright (C) 2026 Stefan Karlsson (Gazeomatic). All rights reserved.
+
+This software is freeware. By installing, copying or using it you agree
+to the terms below.
+
+1. FREE USE
+   You may use this software free of charge, for private and commercial
+   purposes, on any number of computers.
+
+2. FREE DISTRIBUTION
+   You may copy and share this software freely, provided that:
+   a) it is distributed complete and unmodified, including this license;
+   b) no fee of any kind is charged for it; and
+   c) it is not sold, rented, sublicensed or bundled with a commercial
+      product without prior written permission from the author.
+
+3. MODIFICATION
+   You may change the source code for your own personal use. Distributing
+   modified versions requires prior written permission from the author.
+   You may not remove copyright notices or present this software, or any
+   part of it, as your own work.
+
+4. DONATIONS
+   The software is and stays free. Donations are entirely voluntary and do
+   not buy any additional rights, support or warranty.
+   Donate: https://paypal.me/gazeomatic
+
+   FREE EDITION: this free edition saves processed photos at up to 1280
+   pixels on the long side; everything else works without limits. A
+   full-resolution edition is not offered at this time. It may be offered
+   later under separate terms; donations do not entitle you to it. A key
+   for a full edition is personal and may not be shared or published.
+
+5. THIRD-PARTY COMPONENTS
+   This software uses Python, Tcl/Tk, NumPy, OpenCV (including its Haar
+   cascade data) and Pillow, and the Windows executable is compiled with
+   Nuitka. These components remain under their own licenses (PSF, Tcl/Tk
+   BSD-style, BSD, Apache 2.0 / Intel BSD-style, MIT-CMU/HPND and Apache 2.0,
+   respectively), which this license does not change.
+
+   Reverse engineering, decompiling or disassembling the compiled program,
+   except where applicable law expressly permits it, is not allowed.
+
+6. NO WARRANTY
+   THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+   Always keep backups of your original images.
+
+7. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, DATA LOSS
+   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+8. TERMINATION
+   This license ends automatically if you break any of its terms. You must
+   then stop distributing the software.
