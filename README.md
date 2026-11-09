@@ -4,7 +4,7 @@
 
 <h1 align="center">Normalizzer</h1>
 <p align="center"><b>Make AI portraits and over-processed photos look natural again — automatically.</b><br>
-Version 1.8.0 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % offline</p>
+Version 1.8.1 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % offline</p>
 
 <p align="center">
   <a href="https://paypal.me/gazeomatic"><img src="https://img.shields.io/badge/Donate-PayPal-FFC439?style=for-the-badge&logo=paypal&logoColor=003087" alt="Donate with PayPal"></a>
@@ -320,7 +320,7 @@ These steps are for building the application from the project files; they are no
 1. Install **Python 3.10+** from [python.org](https://www.python.org) and enable **Add python.exe to PATH**.
 2. Double-click **`build.bat`**. It compiles the application to native code with **Nuitka** and writes the build to an existing `Releases` (or `Release`) folder one or two folders above or beside `build.bat`. If no such folder exists, it creates `Releases` beside `build.bat`:
    - `Releases\Normalizzer\` — the portable application folder.
-   - `Releases\Normalizzer_v1.8.0_Windows_x64_portable.zip` — the distributable release archive.
+   - `Releases\Normalizzer_v1.8.1_Windows_x64_portable.zip` — the distributable release archive.
 3. Build tools stay inside the project folder: `.buildenv` contains Python packages and `.buildcache` contains compiler files and downloads. Temporary files are removed afterwards. The first build can take 10–20 minutes.
    - At the end, you can choose whether to keep `.buildenv` and `.buildcache`. Keeping them makes later builds faster because the environment can be reused.
    - `build.bat keep` keeps both folders without asking. `build.bat clean` starts with a fresh build environment and removes both folders afterwards.
@@ -333,6 +333,10 @@ These steps are for building the application from the project files; they are no
 </details>
 
 ## 📝 Version history
+
+### 1.8.1
+
+- The **Vote in the poll** buttons now open the poll itself: [Would you like a full-resolution version of Normalizzer?](https://github.com/Siba79/Normalizzer/discussions/2)
 
 ### 1.8.0
 
@@ -687,7 +691,7 @@ This is the **free edition**: every tool, Smart mode, batch processing and the f
 
 A **full-resolution version** may be released if enough people want it. If you would like one:
 
-- **Vote in the poll** on the [Normalizzer Discussions page](https://github.com/Siba79/Normalizzer/discussions), or give a 👍 to the pinned issue.
+- **Vote in the poll:** [Would you like a full-resolution version of Normalizzer?](https://github.com/Siba79/Normalizzer/discussions/2), or give a 👍 to the pinned issue.
 - **Show your support** with a tip of any amount via PayPal (below). Tips are very welcome and help decide — but they don't buy a version or a key.
 
 A full version is **not available yet**, and no keys are sold.
