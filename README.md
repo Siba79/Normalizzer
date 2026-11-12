@@ -4,7 +4,7 @@
 
 <h1 align="center">Normalizzer</h1>
 <p align="center"><b>Make AI portraits and over-processed photos look natural again — automatically.</b><br>
-Version 1.8.1 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % offline</p>
+Version 1.8.5 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % offline</p>
 
 <p align="center">
   <a href="https://paypal.me/gazeomatic"><img src="https://img.shields.io/badge/Donate-PayPal-FFC439?style=for-the-badge&logo=paypal&logoColor=003087" alt="Donate with PayPal"></a>
@@ -50,7 +50,7 @@ Version 1.8.1 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % of
 
 ## 📸 Examples
 
-All *after* images use Normalizzer's **default settings** — Smart mode at 25 % sensitivity, Natural look — with **no manual adjustments**. The portraits are AI-generated, the kind of images Normalizzer was made for. Percentages are taken from the app's Result card.
+All *after* images were made with Normalizzer 1.7.1's **default settings** — Smart mode at 25 % sensitivity, Natural look — with **no manual adjustments**. The portraits are AI-generated, the kind of images Normalizzer was made for. Percentages are taken from the app's Result card.
 
 | Example | Before / after |
 | --- | --- |
@@ -80,7 +80,7 @@ Smart mode is on by default. Before processing a photo, it measures several imag
 
 ### What Smart mode checks
 
-The figures below describe the detection levels used by Smart mode at **60% sensitivity** (the default is 25%: see *Sensitivity* below). Natural values vary between photos and people.
+The figures below describe the detection levels used by Smart mode at **60% sensitivity** (the default is 50%: see *Sensitivity* below). Natural values vary between photos and people.
 
 | Check | Typical natural range | Smart mode flags |
 | --- | --- | --- |
@@ -104,7 +104,7 @@ The figures below describe the detection levels used by Smart mode at **60% sens
 - **Per-photo settings:** when you open a photo, Smart mode moves the sliders to the values selected for that image. Settings it does not control — such as Brightness, Subject / Scene Levels and Hue — remain yours to adjust.
 - **Manual adjustments:** with Smart mode on, changing a slider adjusts the current photo only. Its value is highlighted and the Result card marks the photo as *adjusted*. The next photo gets its own Smart values; returning to the previous photo retains your adjustment.
 - **Your own settings:** turn Smart mode off to use your saved slider settings on every photo.
-- **Sensitivity:** the slider under Smart mode controls how readily a photo is treated. Lower sensitivity only fixes clearly over-processed photos; higher sensitivity also catches milder cases. **At 0 % Smart mode changes nothing**; below 50 % only photos that clearly need it are fixed (at the default 25 % 14 of 22 test photos, at 10 % only the most over-processed ones; from 50 % all photos Smart finds a need in). Above 25 % Smart also acts **stronger**: its corrections are x1 at 25 %, about x1.5 at 60 % and x2 at 100 %. At 60%, the thresholds are those in the table above. At **0%**, the skin / iris / contrast limits are **28 / 13 / 26.5**, flat darkness is **14%**, and the colour-cast limit is **4.5**. At **100%**, those limits are **18 / 8 / 17.5**, **4%**, and **1.5** respectively.
+- **Sensitivity:** the slider under Smart mode controls how readily a photo is treated. Lower sensitivity only fixes clearly over-processed photos; higher sensitivity also catches milder cases. **At 0 % Smart mode changes nothing**; below 50 % only photos that clearly need it are fixed (at 25 % 14 of 22 test photos, at 10 % only the most over-processed ones; from 50 % - the default - all photos Smart finds a need in). Above 25 % Smart also acts **stronger**: its corrections are x1 at 25 %, about x1.33 at the default 50 %, x1.5 at 60 % and x2 at 100 %. At 60%, the thresholds are those in the table above. At **0%**, the skin / iris / contrast limits are **28 / 13 / 26.5**, flat darkness is **14%**, and the colour-cast limit is **4.5**. At **100%**, those limits are **18 / 8 / 17.5**, **4%**, and **1.5** respectively.
 - **Result card:** shows the current limits and the decision, for example *Looks natural, left unchanged* or *Fixed: skin colour, eye colour, tone*.
 
 ### Teach Smart — learn from your saves
@@ -162,7 +162,7 @@ All two-way sliders have **0 in the middle = no change**. Moving left means less
 | Section | Setting | Default | What it controls |
 | --- | --- | --- | --- |
 | Smart mode | On / off | On | Smart mode selects values per photo. Turn it off to use your own settings on every photo. |
-| Smart mode | Sensitivity | 25% | How readily Smart mode decides that a photo needs correction. Higher values flag milder excess; 0% changes nothing. |
+| Smart mode | Sensitivity | 50% | How readily Smart mode decides that a photo needs correction. Higher values flag milder excess; 0% changes nothing. |
 | Smart mode | Look | Natural | Matte / Natural / Dynamic: the look Smart leans every photo toward. |
 | Smart mode | Learn from my saves, Profile | On, none | Learning from your saves (`teach.json`) and the loaded lessons profile (`profiles` folder). |
 | Global › Colour | White balance | 0% | Removes a measured colour cast when the measurement is reliable. Smart mode uses up to 75%. |
@@ -174,7 +174,7 @@ All two-way sliders have **0 in the middle = no change**. Moving left means less
 | Global › Light | Shadows + **Keep black** | 0 | Right brightens; left darkens washed-out shadows. *Keep black* prevents pure black from being lifted. |
 | Global › Light | Keep blacks deep | 60% | Protects the deepest tones when contrast is changed. |
 | Global › Levels | Input black / midtones / white; output black / white | 0 / 1.00 / 255; 0 / 255 | Photoshop-style Levels with a histogram. Drag the triangles or enter values. Smart mode can set a gentle black point on faded photos. |
-| Global › Detail | Sharpness | 0 | Softens or sharpens fine detail across the whole image. Smart mode softens only when a photo is over-sharpened. |
+| Global › Detail | Sharpness | 0 | Softens or sharpens fine detail across the whole image. Smart mode leaves it at 0 (unchanged) unless a lesson - the built-in experience, your own or a profile - says otherwise. |
 | Subject › Person | Brightness, Contrast | 0 | Adjusts the person, including clothing. |
 | Subject › Skin | Saturation | 0 | Changes skin colour. For example, -13% means 13% less colour. Smart mode typically reduces over-coloured skin by about 8–16%. |
 | Subject › Skin | Hue | 0 | Shifts skin towards red or yellow by up to 15°. |
@@ -198,6 +198,7 @@ The **Result** card lists the corrections and shows every measurement as a **per
 | **?** (`F1`) | Shows every keyboard shortcut and mouse control in one window. |
 | **Guide** | Opens this user guide (`README.html`) in its own window: sections on the left, the guide on the right; *Open in browser* shows the full web page. |
 | **Open image…** (`Ctrl+O`) | Opens a photo and creates a fast preview for adjusting settings. |
+| **From Windows Explorer** | Right-click a photo → **Edit with Normalizzer** (switch it on in **Settings**; on Windows 11 it is under *Show more options*), or **Open with → Normalizzer**. The photo opens in the window. |
 | **Save** (`Ctrl+S`) | Processes at full resolution and saves as `<name>_natural` in a `<folder name>_normalized` folder next to the photo's folder (e.g. `Portraits` → `Portraits_normalized`). Asks before replacing an existing output file. |
 | **Save as…** (`Ctrl+Shift+S`) | Processes at full resolution and lets you choose the output folder and name. `_natural` is suggested. |
 | **Batch folder…** | Processes every image in a folder into a `<folder name>_normalized` folder next to it (e.g. `Portraits` → `Portraits_normalized`) and creates `normalizzer_report.csv` there. The progress window shows image count, current file, fixed / natural / failed counts, elapsed time, estimated time remaining and a result line for each image. Cancel stops after the current image. |
@@ -207,7 +208,7 @@ The **Result** card lists the corrections and shows every measurement as a **per
 | **Masks** | Displays detected regions: 🟧 skin, 🟦 eyes, 🟪 hair and 🟩 the person, including clothing. |
 | **Zoom controls** | Zoom out, zoom in or fit the whole photo in the window. |
 | **Light / Dark** | Switches the interface theme. |
-| **Settings** | Chooses output format and image quality. |
+| **Settings** | Chooses output format and image quality, the interface size and the Explorer menu. |
 | **About** | Shows version, licence and donation information. |
 
 ### Zoom and pan
@@ -263,6 +264,7 @@ Open **⚙ Settings** in the toolbar. These choices are remembered and used by *
 
 | Setting | Default | What it does |
 | --- | --- | --- |
+| Windows Explorer | Off | **Show 'Edit with Normalizzer' when you right-click a photo**, with the app's icon, for every image type Normalizzer opens; Normalizzer is also listed by name and icon under *Open with*. On Windows 11 it is under *Show more options*. Only for your Windows user, no admin rights; turning it off removes it. If you move the app folder, the entry follows on the next start. |
 | Interface size | Small (90 %) | Six sizes - Smallest 80 %, Small 90 %, Medium 100 %, Large 110 %, Larger 125 %, Largest 140 % - for buttons, text and the side panel; applied at once. |
 | Save as | JPEG | Converts output to **JPEG** (default), **PNG (lossless)**, **WebP** or **TIFF (lossless)**, or keeps each photo's format (*Same as the original*). JPEG has no transparency; choose PNG / WebP / TIFF or *Same as the original* for photos with an alpha channel. |
 | JPEG quality | 97 | Range 50–100. Higher quality produces larger files. |
@@ -274,7 +276,7 @@ JPEG 2000 output is always lossless. TIFF uses lossless LZW compression.
 
 ## ⌨️ Command-line batch processing
 
-Normalizzer can also be run from Command Prompt or a script. Examples:
+Normalizzer can also be run from Command Prompt or a script. Photo paths **without any option** (`Normalizzer.exe photo.jpg`) open the first photo in the window, like *Open with* in Explorer; add an option such as `-o` to process them as a batch. Examples:
 
 ```bat
 REM Process a folder and add a suffix to output files
@@ -310,7 +312,7 @@ Output options include `--format`, `--jpeg_quality`, `--jpeg_420`, `--png_compre
 
 - **Best suited to portraits and people photos:** Smart mode can automatically assess skin and eyes when it detects them. For scenery without people, use *Scene saturation* to decide how much colour reduction is appropriate. A naturally vivid red car or sunset can look similar to an over-processed scene to an automatic detector.
 - **No unnecessary correction:** the aim is to correct excess. Photos that already look natural should change very little, and Smart mode leaves them untouched when it finds no reason to intervene.
-- **Portable storage:** Normalizzer does not install itself, write to the Windows registry or put its own settings in your user profile. `settings.json`, `teach.json` and the `profiles` folder stay beside the app. Windows may still remember the last folder used in its own Open / Save dialogs; that behaviour belongs to Windows.
+- **Portable storage:** Normalizzer does not install itself, write to the Windows registry or put its own settings in your user profile. The only exception is the optional *Edit with Normalizzer* Explorer menu (off by default): when you switch it on in Settings it adds menu entries for your Windows user, and switching it off removes them. `settings.json`, `teach.json` and the `profiles` folder stay beside the app. Windows may still remember the last folder used in its own Open / Save dialogs; that behaviour belongs to Windows.
 
 <details>
 <summary>🛠️ Building and publishing (maintainer notes)</summary>
@@ -320,7 +322,7 @@ These steps are for building the application from the project files; they are no
 1. Install **Python 3.10+** from [python.org](https://www.python.org) and enable **Add python.exe to PATH**.
 2. Double-click **`build.bat`**. It compiles the application to native code with **Nuitka** and writes the build to an existing `Releases` (or `Release`) folder one or two folders above or beside `build.bat`. If no such folder exists, it creates `Releases` beside `build.bat`:
    - `Releases\Normalizzer\` — the portable application folder.
-   - `Releases\Normalizzer_v1.8.1_Windows_x64_portable.zip` — the distributable release archive.
+   - `Releases\Normalizzer_v1.8.5_Windows_x64_portable.zip` — the distributable release archive.
 3. Build tools stay inside the project folder: `.buildenv` contains Python packages and `.buildcache` contains compiler files and downloads. Temporary files are removed afterwards. The first build can take 10–20 minutes.
    - At the end, you can choose whether to keep `.buildenv` and `.buildcache`. Keeping them makes later builds faster because the environment can be reused.
    - `build.bat keep` keeps both folders without asking. `build.bat clean` starts with a fresh build environment and removes both folders afterwards.
@@ -333,6 +335,22 @@ These steps are for building the application from the project files; they are no
 </details>
 
 ## 📝 Version history
+
+### 1.8.5
+
+- **Opening a photo from Explorer works:** *Open with → Normalizzer* (or starting `Normalizzer.exe` with just a photo) now opens the photo in the window. Before, it was processed silently in the background and nothing appeared
+- **Edit with Normalizzer** in Explorer's right-click menu, with the app's icon - switch it on in **Settings → Windows Explorer** (off by default; on Windows 11 under *Show more options*). Normalizzer is then also listed by name and icon under *Open with*
+- Teach round: 134 new lessons added to the built-in experience (Exp now 325 photos)
+
+### 1.8.4
+
+- Teach round: 8 new lessons added to the built-in experience (Exp now 191 photos)
+
+### 1.8.3
+
+- Teach round: 117 new lessons added to the built-in experience (Exp now 183 photos)
+- **Sensitivity default is now 50 %** (was 25 %): Smart mode fixes every photo it finds a need in, a little stronger (x1.33). A saved Sensitivity is reset to 50 % once; everything else in your settings is kept
+- **Smart mode no longer softens Global Sharpness by default:** it stays at 0 (unchanged) unless a lesson says otherwise - the built-in experience (it now only sharpens photos like the ones the author sharpened by hand), your own saved lessons or a profile
 
 ### 1.8.1
 
