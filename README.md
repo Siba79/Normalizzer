@@ -4,7 +4,7 @@
 
 <h1 align="center">Normalizzer</h1>
 <p align="center"><b>Make AI portraits and over-processed photos look natural again — automatically.</b><br>
-Version 1.8.5 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % offline</p>
+Version 1.8.6 &bull; Freeware &bull; Windows x64 &bull; Portable &bull; 100 % offline</p>
 
 <p align="center">
   <a href="https://paypal.me/gazeomatic"><img src="https://img.shields.io/badge/Donate-PayPal-FFC439?style=for-the-badge&logo=paypal&logoColor=003087" alt="Donate with PayPal"></a>
@@ -322,7 +322,7 @@ These steps are for building the application from the project files; they are no
 1. Install **Python 3.10+** from [python.org](https://www.python.org) and enable **Add python.exe to PATH**.
 2. Double-click **`build.bat`**. It compiles the application to native code with **Nuitka** and writes the build to an existing `Releases` (or `Release`) folder one or two folders above or beside `build.bat`. If no such folder exists, it creates `Releases` beside `build.bat`:
    - `Releases\Normalizzer\` — the portable application folder.
-   - `Releases\Normalizzer_v1.8.5_Windows_x64_portable.zip` — the distributable release archive.
+   - `Releases\Normalizzer_v1.8.6_Windows_x64_portable.zip` — the distributable release archive.
 3. Build tools stay inside the project folder: `.buildenv` contains Python packages and `.buildcache` contains compiler files and downloads. Temporary files are removed afterwards. The first build can take 10–20 minutes.
    - At the end, you can choose whether to keep `.buildenv` and `.buildcache`. Keeping them makes later builds faster because the environment can be reused.
    - `build.bat keep` keeps both folders without asking. `build.bat clean` starts with a fresh build environment and removes both folders afterwards.
@@ -335,6 +335,10 @@ These steps are for building the application from the project files; they are no
 </details>
 
 ## 📝 Version history
+
+### 1.8.6
+
+- Updated the default application icon (`app.ico` and `app.png`) to the new Normalizzer logo
 
 ### 1.8.5
 
@@ -399,7 +403,7 @@ These steps are for building the application from the project files; they are no
 - **Interface size:** six sizes in **Settings** - Smallest 80 %, Small 90 % (the new, slightly more compact default), Medium 100 % (the old size), Large 110 %, Larger 125 %, Largest 140 %. Buttons, text and the side panel change at once; when the toolbar no longer fits it switches to icons only
 - The **?** button now shows a question mark in a circle
 - **Higher sensitivity = stronger:** above 25 % Smart mode also applies its corrections more strongly - x1 at 25 %, about x1.5 at 60 %, x2 at 100 % (before, raising the sensitivity past the point where a photo was fixed changed nothing)
-- **Sensitivity 0 % = no changes at all:** below 50 % Smart mode (incl. its built-in experience, your lessons, profile and look) now only fixes photos that clearly need it - fewer the lower you go, none at 0 %. From 50 % up nothing changed. 
+- **Sensitivity 0 % = no changes at all:** below 50 % Smart mode (incl. its built-in experience, your lessons, profile and look) now only fixes photos that clearly need it - fewer the lower you go, none at 0 %. From 50 % up nothing changed.
 - **Teach Smart follows the sensitivity:** a saved photo is learned as *your correction of Smart at the sensitivity you saved it with*. At the same sensitivity a similar photo gets your result; raise the sensitivity and Smart does more on top of your correction and finds more to fix. Lessons count at any sensitivity above 0 %, also on photos Smart alone would leave alone. Lessons saved before 1.7.1 count as made at 60 %
 - **Whole photo** summary at the bottom of the Result card: how much the **Saturation**, **Brightness** and **Contrast** of the whole photo changed
 
@@ -726,3 +730,4 @@ Normalizzer is free. If it saves you time, a small donation keeps development go
 
 Freeware. Copyright © 2026 Stefan Karlsson (Gazeomatic). See [`LICENSE.txt`](LICENSE.txt).
 
+Third-party parts (OpenCV and its Haar data, the YuNet and PP-HumanSeg models from OpenCV Zoo, TkinterWeb / Tkhtml and others) keep their own open-source licenses; their notices are in `THIRD_PARTY_NOTICES.txt` in the app folder.

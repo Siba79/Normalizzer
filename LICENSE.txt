@@ -1,6 +1,6 @@
 NORMALIZZER - FREEWARE LICENSE
 A natural tone photo processor
-Version 1.8.5
+Version 1.8.6
 
 Copyright (C) 2026 Stefan Karlsson (Gazeomatic). All rights reserved.
 
@@ -40,7 +40,13 @@ to the terms below.
    cascade data) and Pillow, and the Windows executable is compiled with
    Nuitka. These components remain under their own licenses (PSF, Tcl/Tk
    BSD-style, BSD, Apache 2.0 / Intel BSD-style, MIT-CMU/HPND and Apache 2.0,
-   respectively), which this license does not change.
+   respectively), which this license does not change. It also includes the
+   YuNet face detection model (MIT, Copyright (c) 2020 Shiqi Yu), the
+   PP-HumanSeg person segmentation model (Apache 2.0, Copyright (c) 2021
+   PaddlePaddle Authors), both from OpenCV Zoo, and TkinterWeb /
+   TkinterWeb-Tkhtml (MIT, Andrew Clarke) with Tkhtml 3 (BSD-style, Dan
+   Kennedy). Their copyright notices and full license texts are in
+   THIRD_PARTY_NOTICES.txt.
 
    Reverse engineering, decompiling or disassembling the compiled program,
    except where applicable law expressly permits it, is not allowed.
